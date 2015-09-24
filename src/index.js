@@ -1,4 +1,13 @@
+/*
+ Made w/ love by Tony (tedwards947)
+ MIT Licence
+ 
+ For more information on contenteditible, my favorite & extremely-well-supported attribute:
+ http://www.w3schools.com/tags/att_global_contenteditable.asp
+
+*/
 (function () {
+    //http://stackoverflow.com/questions/10730309/find-all-text-nodes-in-html-page
     function deepText(node) {
         var A = [];
         if (node) {
@@ -13,10 +22,13 @@
     }
 
     function setTextContentEditable(){
+        //gets all text nodes within the body
         var allTextNodes = deepText(document.getElementsByTagName('body')[0]);
-        Array.prototype.slice.call(allTextNodes).forEach(function(textNode){
+        allTextNodes.forEach(function(textNode){
+            //sets the text node's parent to contenteditable
+            //for more information on contenteditable, my favorite attribute: 
             textNode.parentNode.contentEditable = true;
-            return textNode.parentNode
+            return textNode.parentNode;
         });        
     }
     setTextContentEditable();
