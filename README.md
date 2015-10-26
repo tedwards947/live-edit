@@ -13,9 +13,9 @@ any edits made to a webpage with this **will not be retained** upon navigation o
 ## Instructions
 
 #### Bookmarklet code
-`
+```
 javascript:!function(){/*made w love by tony https://github.com/tedwards947/live-edit */function n(t){var e=[];if(t)for(t=t.firstChild;null!=t;)3==t.nodeType?e[e.length]=t:e=e.concat(n(t)),t=t.nextSibling;return e}function t(){var t=n(document.getElementsByTagName("body")[0]);t.forEach(function(n){return n.parentNode.contentEditable=!0,n.parentNode})}t()}();
-`
+```
 ##### Chrome
 1. create a new bookmark in Chrome.
 * right click the bookmarks bar and click "Add Page".
